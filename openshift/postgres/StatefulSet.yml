@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: sagu-postgres
+spec:
+  serviceName: "postgres"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:9.1
+        envFrom:
+          - configMapRef:
+              name: sagu-postgres-config
+        ports:
+        - containerPort: 5432
+          name: postgresql
+        volumeMounts:
+        - name: sagu-postgres-data
+          mountPath: /var/lib/postgresql/data
+          subPath: postgres
+          readOnly: false
+      volumes:
+      - name: sagu-postgres-data
+        persistentVolumeClaim:
+          claimName: sagu-postgres-data

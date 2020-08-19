@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sagu-postgres-config
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: sagu
+  POSTGRES_USER: sagu
+  POSTGRES_PASSWORD: eiveeSa2ioGaenaaSo

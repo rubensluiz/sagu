@@ -7,5 +7,6 @@
 *.iml
 out
 gen
-miolo20/var/log/*
+log/*
 backup/*.sql
+/data

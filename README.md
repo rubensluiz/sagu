@@ -41,7 +41,7 @@ Realizando a implantação do projeto em um ambiente de desenvolvimento
 
 ## Documentação PDF
 
-<a href="https://github.com/EscolaDeSaudePublica/sagu/blob/master/pdf/SAGU%20-%20ESPCE.pdf">Apresentação (PDF)</a>
+<a href="https://github.com/EscolaDeSaudePublica/sagu/blob/master/docs/SAGU%20-%20ESPCE.pdf">Apresentação (PDF)</a>
 
 ## Licença
 
